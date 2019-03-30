@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+
+<main role="main" class="container">
+
+    <h2>Transaction Statistics: </h2>
+    
+     <div>
+     <tr>
+     		
+         Sum:  <td th:text="${stats.sum}"></td> <br>
+         Avg:  <td th:text="${stats.avg}"></td><br>
+         max:  <td th:text="${stats.max}"></td><br>
+         min:  <td th:text="${stats.min}"></td><br>
+         count:  <td th:text="${stats.count}"></td><br>
+
+          <!--<td>-->
+              <!--&lt;!&ndash;<a href="#"> Edit </a>&ndash;&gt;-->
+          <!--</td>-->
+      </tr>
+     </div>
+     <br>
+    
+
+<a href="http://localhost:9090/consumers">Form</a>
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

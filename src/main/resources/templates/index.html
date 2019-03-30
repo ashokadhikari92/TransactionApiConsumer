@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<h2>Add Transaction Amount</h2>
+
+<main role="main" class="container">
+
+
+ 	<form name="item" th:object="${transaction}" method="post">
+                
+            <label class="col-sm-3 form-control-label text-xs-right required"> Amount: </label>
+            <input type="text" class="form-control boxed" placeholder="" th:field="*{amount}">
+            
+            <input type="submit" value="Submit" />
+    </form>
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
